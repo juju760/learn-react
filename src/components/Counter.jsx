@@ -27,6 +27,11 @@ const Counter = ({step = 1, onIncreaseClick}) => {
     console.log("🚀 ~ handleDecrease ~ count:", count)
   }
 
+  /*state- 내부변수, prop-외부(함수에서 파라미터와 비슷)*/
+  /*logical operators 단축 평가 논리 계산법 (and,or,not)
+  
+  */
+
 
   //view (html)
   return (
