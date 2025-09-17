@@ -3,11 +3,21 @@ import Card from "./components/Card";
 import Counter from "./components/Counter";
 
 function App() {
+    //logic
+    const handleIncrease=() =>{
+        console.log("🍧🍦더하기 버튼 클릭!!")
+    }
+
+
+    //view
     return <div className="App">
         박혜정임
-        <Greeting />
+        <Greeting username ="혜정park"/>
+        <Greeting username ="박헤죵"/>
+        <Greeting username ={"박혜증"}/>
         <Card />
-        <Counter />
+        <Counter onIncreaseClick={handleIncrease}/>
+        <Counter step = {5} onIncreaseClick={handleIncrease}/>
         </div>;
 }
 
