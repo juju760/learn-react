@@ -1,25 +1,23 @@
-import Greeting from "./components/Greeting";
-import Card from "./components/Card";
-import Counter from "./components/Counter";
-import Logical from "./components/Logical";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
 
 function App() {
-    //logic
-    const handleIncrease=() =>{
-        console.log("🍧🍦더하기 버튼 클릭!!")
-    }
+  //logic
+  //페이지 3개: Home, About, Contact 
 
-
-    //view
-    return <div className="App">
-        <Logical />
-        <Greeting username ="혜정park"/>
-        <Greeting username ="박헤죵"/>
-        <Greeting username ={"박혜증"}/>
-        <Card />
-        <Counter onIncreaseClick={handleIncrease}/>
-        <Counter step = {5} onIncreaseClick={handleIncrease}/>
-        </div>;
+  //view
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/contact" element={<Contact />}/>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
