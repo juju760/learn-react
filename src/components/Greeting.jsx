@@ -1,4 +1,5 @@
 import React from 'react'
+//초기화: rafce
 
 const Greeting = () => {
   return (
